@@ -172,70 +172,8 @@
 
 ---
 
-## 8. 目录结构
+## 9. 方法论总结
 
-```text
-nipt-analysis/
-├── README.md
-├── requirements.txt
-├── data/
-│   ├── raw/               # 原始数据（本地存放，不上传）
-│   └── synthetic/         # 脱敏样本或生成脚本
-├── src/
-│   ├── data/              # 数据清洗与预处理
-│   │   ├── filter.py
-│   │   ├── filter_female.py
-│   │   ├── profile_male.py
-│   │   ├── resample.py
-│   │   ├── standardize.py
-│   │   ├── anomaly_label.py
-│   │   └── y_concentration.py
-│   └── analysis/          # 统计建模与机器学习
-│       ├── correlation_pearson.py
-│       ├── correlation_spearman.py
-│       ├── regression_linear.py
-│       ├── regression_gam.py
-│       ├── gmm_grouping.py
-│       ├── kaplan_meier.py
-│       ├── cox_model.py
-│       ├── monte_carlo.py
-│       ├── sensitivity.py
-│       └── random_forest.py
-├── results/
-│   ├── figures/           # 生成的图片
-│   ├── tables/            # 生成的表格
-│   └── rules/             # IF-THEN 规则文件
-└── docs/
-    └── methodology.md     # 方法说明
-```
-
----
-
-## 9. 复现说明
-
-```bash
-# 1. 安装依赖
-pip install -r requirements.txt
-
-# 2. 将原始数据放入 data/raw/ 目录（文件不公开）
-
-# 3. 按顺序运行
-python src/data/filter.py
-python src/data/standardize.py
-python src/analysis/correlation_pearson.py
-python src/analysis/regression_linear.py
-python src/analysis/regression_gam.py
-python src/analysis/gmm_grouping.py
-python src/analysis/kaplan_meier.py
-python src/analysis/cox_model.py
-python src/analysis/random_forest.py
-```
-
----
-
-## 10. 方法论总结
-
-| 能力 | 体现 |
 |------|------|
 | 数据清洗 | 逻辑校验、投票机制去重、缺失值处理、标准化、重采样 |
 | 统计分析 | Pearson/Spearman 相关分析、多元线性回归、GAM 非线性拟合 |
@@ -251,5 +189,3 @@ python src/analysis/random_forest.py
 - 未来可引入深度学习模型，进一步提升对复杂非线性关系的刻画能力。
 
 ---
-
-> 本仓库仅用于学术交流与作品展示，不包含原始数据及可识别个人身份的信息。如需引用，请注明出处。

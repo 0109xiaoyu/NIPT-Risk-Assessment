@@ -2,7 +2,7 @@
 
 > 基于 NIPT 数据的多模型融合与风险分层研究 —— 从相关性建模、生存分析到可解释规则提取的完整数据分析闭环
 
-[![Python](https://img.shields.io/badge/Python-3-blue)]()
+[![Python](https://img.shields.io/badge/Python-3.x-blue)]()
 [![PyGAM](https://img.shields.io/badge/PyGAM-GAM-orange)]()
 [![Lifelines](https://img.shields.io/badge/Lifelines-Survival-green)]()
 [![Scikit--learn](https://img.shields.io/badge/Scikit--learn-RF%20%2F%20GMM-red)]()
